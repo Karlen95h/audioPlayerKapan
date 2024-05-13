@@ -59,3 +59,18 @@ function playOrPauseSong(){
 }
 
 
+
+song.addEventListener("timeupdate" , function (){
+            let fill = document.getElementsByClassName("fill")
+                // console.log(song.currentTime);
+                // console.log(song.duration);
+
+                let position = song.currentTime / song.duration //1
+                fill[0].style.marginLeft = position * 99 + "%"
+
+
+                
+
+} )
+
+
