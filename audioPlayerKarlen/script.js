@@ -133,3 +133,38 @@ function  prev(){
 
             playSong()
 }
+
+// console.log(song);
+var mutes = document.getElementById("mute")
+function  mute(){
+
+        if(song.muted){
+                  song.muted = false
+                  mutes.src = "images/volume.png"
+                }else{
+                    song.muted  = true
+                    mutes.src = "images/volume-mute.png"  
+                }
+}
+
+
+
+
+function  decrease(){
+      song.volume-= 0.2
+    //   if(song.volume <= 0.2){
+    //       song.volume =0
+    //     mutes.src = "images/volume-mute.png"  
+
+    //   }
+}
+
+
+function  increase(){
+    song.volume+= 0.2
+    // if(song.volume > 0.2){
+    //     song.volume =0
+    //   mutes.src = "images/volume.png"  
+
+    // }
+}
