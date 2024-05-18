@@ -121,6 +121,7 @@ function  next(){
           }
 
           playSong()
+          play.src =  "images/pause.png" 
 }
 
 
@@ -132,39 +133,29 @@ function  prev(){
             }
 
             playSong()
+            play.src =  "images/pause.png" 
 }
 
-// console.log(song);
-var mutes = document.getElementById("mute")
-function  mute(){
 
-        if(song.muted){
-                  song.muted = false
-                  mutes.src = "images/volume.png"
+// console.log(song);
+function  mute(){
+      let mute = document.getElementById("mute")
+
+                if(song.muted){
+                    mute.src  = "images/volume.png"
+                    song.muted = false
                 }else{
-                    song.muted  = true
-                    mutes.src = "images/volume-mute.png"  
+                    mute.src = "images/volume-mute.png"
+                    song.muted = true
                 }
 }
 
 
-
-
-function  decrease(){
-      song.volume-= 0.2
-    //   if(song.volume <= 0.2){
-    //       song.volume =0
-    //     mutes.src = "images/volume-mute.png"  
-
-    //   }
+function  decrease (){
+          song.volume-= 0.2
 }
 
 
-function  increase(){
-    song.volume+= 0.2
-    // if(song.volume > 0.2){
-    //     song.volume =0
-    //   mutes.src = "images/volume.png"  
-
-    // }
+function   increase(){
+         song.volume+= 0.2
 }
